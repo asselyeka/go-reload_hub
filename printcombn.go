@@ -1,6 +1,36 @@
-package printcombn
+package student
 
 import "github.com/01-edu/z01"
+
+func PrintCombN(n int) {
+	if n < 1 && n > 9 {
+		return
+	}
+	mx_ln := 1
+	for i := 2; i <= n; i++ {
+		mx_ln *= 10
+	}
+	for i := mx_ln / 10; i < mx_ln; i++ {
+		if check(i) == true {
+			if mx_ln >= 10 {
+				z01.PrintRune('0')
+			}
+			GIVE(i)
+			z01.PrintRune(',')
+			z01.PrintRune(' ')
+		}
+	}
+	for i := mx_ln; i <= mx_ln*9; i++ {
+		if check(i) == true {
+			GIVE(i)
+			if ok(i) == true {
+				z01.PrintRune(',')
+				z01.PrintRune(' ')
+			}
+		}
+	}
+	z01.PrintRune('\n')
+}
 
 func GIVE(y int) {
 	w := '0'
@@ -52,30 +82,4 @@ func ok(p int) bool {
 	} else {
 		return true
 	}
-}
-func PrintCombN(n int) {
-	mx_ln := 1
-	for i := 2; i <= n; i++ {
-		mx_ln *= 10
-	}
-	for i := mx_ln / 10; i < mx_ln; i++ {
-		if check(i) == true {
-			if mx_ln >= 10 {
-				z01.PrintRune('0')
-			}
-			GIVE(i)
-			z01.PrintRune(',')
-			z01.PrintRune(' ')
-		}
-	}
-	for i := mx_ln; i <= mx_ln*9; i++ {
-		if check(i) == true {
-			GIVE(i)
-			if ok(i) == true {
-				z01.PrintRune(',')
-				z01.PrintRune(' ')
-			}
-		}
-	}
-	z01.PrintRune('\n')
 }

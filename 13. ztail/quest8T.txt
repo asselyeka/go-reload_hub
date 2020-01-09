@@ -1,1 +1,12 @@
 "Alan Mathison Turing was an English mathematician, computer scientist, logician, cryptanalyst. Turing was highly influential in the development of theoretical computer science, providing a formalisation of the concepts of algorithm and computation with the Turing machine, which can be considered a model of a general-purpose computer. Turing is widely considered to be the father of theoretical computer science and artificial intelligence."
+ztail
+Run both ztail and the system command tail with the arguments: -c 20 <filename>
+Are the outputs exactly the same?
+Run both ztail and the system command tail with the arguments: <filename> -c 23
+Are the outputs exactly the same?
+Run both ztail and the system command tail with the arguments: -c jelrjq 15
+Are the outputs exactly the same?
+Run both ztail and the system command tail with the arguments: -c 11 <filename> jfdklsa
+Are the outputs exactly the same?
+Run both ztail and the system command tail with the arguments: 11 -c <filename>
+Are the outputs exactly the same?
